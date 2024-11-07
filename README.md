@@ -12,7 +12,7 @@ Note: I was unable to add the entire dbt-project foler, so I have just added the
 ## Pipeline
 This is an overview of the ELT pipeline
 
-![Pipeline](images/elt-pipeline.png)
+<img src="images/elt-pipeline.png" alt="Pipeline" width="400"/>
 
 ## Installation
 
