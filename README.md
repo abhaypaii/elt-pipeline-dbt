@@ -43,8 +43,6 @@ This is an overview of the ELT pipeline
     ├── .gitignore
     └── requirements.txt
 
-<img src="images/tree.png" alt="Pipeline" width="300"/>
-
 ## Installation
 
 I have implemented my project on VSCode in a virtual environment with the Python version 3.13.0
