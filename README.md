@@ -75,19 +75,19 @@ I have implemented my project on VSCode in a virtual environment with the Python
 
     You will then need to create a service account. After clicking the Go to Create service account button on the linked docs page, select the project you created and name the service account whatever you would like.
 
-Click the Continue button and grant the following roles, so that dlt can create schemas and load data:
+    Click the Continue button and grant the following roles, so that dlt can create schemas and load data:
 
-BigQuery Data Editor, BigQuery Job User, BigQuery Read Session User
+    BigQuery Data Editor, BigQuery Job User, BigQuery Read Session User
 
-You don't need to grant users access to this service account now, so click the Done button.
+ You don't need to grant users access to this service account now, so click the Done button.
 
 4. Download the service account JSON
 
     In the service accounts table page that you're redirected to after clicking Done as instructed above, select the three dots under the Actions column for the service account you created and select Manage keys.
 
-This will take you to a page where you can click the Add key button, then the Create new key button, and finally the Create button, keeping the preselected JSON option.
+    This will take you to a page where you can click the Add key button, then the Create new key button, and finally the Create button, keeping the preselected JSON option.
 
-A JSON file that includes your service account private key will then be downloaded.
+    A JSON file that includes your service account private key will then be downloaded.
 
 5. Update your dlt credentials file with your service account info
 
@@ -95,17 +95,17 @@ A JSON file that includes your service account private key will then be download
 
         open .dlt/secrets.toml
 
-Replace the project_id, private_key, and client_email with the values from the downloaded JSON file:
+   Replace the project_id, private_key, and client_email with the values from the downloaded JSON file:
 
-    [destination.bigquery]
-    location = "US"
+       [destination.bigquery]
+       location = "US"
+   
+       [destination.bigquery.credentials]
+       project_id = "project_id" # please set me up!
+       private_key = "private_key" # please set me up!
+       client_email = "client_email" # please set me up!
 
-    [destination.bigquery.credentials]
-    project_id = "project_id" # please set me up!
-    private_key = "private_key" # please set me up!
-    client_email = "client_email" # please set me up!
-
-You can specify the location of the data, i.e., EU instead of US, which is the default.
+   You can specify the location of the data, i.e., EU instead of US, which is the default.
 
 ### dbt
 
@@ -120,19 +120,19 @@ You can specify the location of the data, i.e., EU instead of US, which is the d
 
 ### 1. Data Ingestion and Loading
 
-- Fetch NBA teams data from the NBA API.
-- Fetch all time game data for each team using LeagueGameFinder and team_id.
-- Append all the teams' game data into a combined dataframe.
-- Drop duplicate games to maintain clean and usable data.
-- Load individual tables and the combined table onto BigQuery.
+   - Fetch NBA teams data from the NBA API.
+   - Fetch all time game data for each team using LeagueGameFinder and team_id.
+   - Append all the teams' game data into a combined dataframe.
+   - Drop duplicate games to maintain clean and usable data.
+   - Load individual tables and the combined table onto BigQuery.
 
 ### 2. Data Transformation
-- Create your_dbt_model.sql under the models folder in your_dbt_project
-- Write SQL code to take distinct values of team_id, team_name, and team_id to create a view of all the NBA teams
-- In terminal, go to your dbt project directory.
+   - Create your_dbt_model.sql under the models folder in your_dbt_project
+   - Write SQL code to take distinct values of team_id, team_name, and team_id to create a view of all the NBA teams
+   - In terminal, go to your dbt project directory.
 
-        cd your_dbt_project
+         cd your_dbt_project
 
-- Run the code
+   - Run the code
 
-        dbt run
+         dbt run
