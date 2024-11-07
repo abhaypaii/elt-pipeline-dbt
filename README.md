@@ -14,34 +14,34 @@ This is an overview of the ELT pipeline
 
 <img src="images/elt-pipeline.png" alt="Pipeline" width="500"/>
 
-## File Tree
 
-  .
-  ├── .dlt/
-  │   └── .sources/
-  │       ├── config.toml
-  │       └── secrets.toml
-  ├── dlt-pipeline.py
-  ├── dlt-service-account-file.json
-  ├── dbt-project/
-  │   ├── analyses
-  │   ├── logs
-  │   ├── macros
-  │   ├── models/
-  │   │   ├── schema.yml
-  │   │   └── team_list.sql
-  │   ├── seeds
-  │   ├── snapshots
-  │   ├── target
-  │   ├── tests
-  │   ├── .gitignore
-  │   ├── dbt_project.yml
-  │   ├── README.md
-  │   ├── sources.yml
-  │   └── logs
-  ├── .cache
-  ├── .gitignore
-  └── requirements.txt
+## Project Structure
+    .
+    ├── .dlt/
+    │   └── .sources/
+    │       ├── config.toml
+    │       └── secrets.toml
+    ├── dlt-pipeline.py
+    ├── dlt-service-account-file.json
+    ├── dbt-project/
+    │   ├── analyses
+    │   ├── logs
+    │   ├── macros
+    │   ├── models/
+    │   │   ├── schema.yml
+    │   │   └── team_list.sql
+    │   ├── seeds
+    │   ├── snapshots
+    │   ├── target
+    │   ├── tests
+    │   ├── .gitignore
+    │   ├── dbt_project.yml
+    │   ├── README.md
+    │   ├── sources.yml
+    │   └── logs
+    ├── .cache
+    ├── .gitignore
+    └── requirements.txt
 
 <img src="images/tree.png" alt="Pipeline" width="300"/>
 
