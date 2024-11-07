@@ -7,9 +7,13 @@ I use the NBA API to ingest data using dlt, and use BigQuery as my data warehous
 
 I am getting deeper into data engineering, and this is my attempt to make it easier for rokies like me to gain hands-on experience of building a pipeline.
 
+Note: I was unable to add the entire dbt-project foler, so I have just added the main model file "team_list.sql" for reference.
 
 ## Pipeline
 This is an overview of the ELT pipeline
+
+
+
 ## Installation
 
 I have implemented my project on VSCode in a virtual environment with the Python version 3.13.0
