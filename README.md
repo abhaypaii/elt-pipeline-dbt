@@ -124,7 +124,9 @@ I have implemented my project on VSCode in a virtual environment with the Python
    - Fetch all time game data for each team using LeagueGameFinder and team_id.
    - Append all the teams' game data into a combined dataframe.
    - Drop duplicate games to maintain clean and usable data.
-   - Load individual tables and the combined table onto BigQuery.
+   - Load individual tables and the combined table onto BigQuery using this command
+
+         python3 path/to/dlt-pipeline.py
 
 ### 2. Data Transformation
    - Create your_dbt_model.sql under the models folder in your_dbt_project
